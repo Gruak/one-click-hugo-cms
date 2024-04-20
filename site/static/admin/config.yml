@@ -14,95 +14,95 @@ collections: # A list of collections the CMS should be able to edit
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tytuł", name: "title", widget: "string"}
+      - {label: "Data publikacji", name: "date", widget: "datetime"}
+      - {label: "Notka wprowadzająca", name: "description", widget: "text"}
+      - {label: "Zdjęcie", name: "image", widget: "image", required: false}
+      - {label: "Treść", name: "body", widget: "markdown"}
   - name: "pages"
-    label: "Pages"
+    label: "Strony"
     files:
       - file: "site/content/_index.md"
-        label: "Home Page"
+        label: "Strona główna"
         name: "home"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+          - {label: Tytuł, name: title, widget: string}
+          - {label: Podtytuł, name: subtitle, widget: string}
+          - {label: Obraz, name: image, widget: image}
+          - {label: "Notka", name: blurb, widget: object, fields: [
+              {label: "Nagłówek", name: "heading", widget: string},
+              {label: "Tekst", name: "text", widget: "text"}]}
+          - {label: "Wstęp", name: intro, widget: object, fields: [
+              {label: "Nagłówek", name: "heading", widget: string},
+              {label: "Tekst", name: "text", widget: "text"}]}
+          - {label: "Produkty", name: products, widget: list, fields: [
+              {label: "Obraz", name: "image", widget: "image"},
+              {label: "Tekst", name: "text", widget: "text"}]}
+          - {label: "Wartości", name: "values", widget: "object", fields: [
+              {label: "Nagłówek", name: "heading", widget: string},
+              {label: "Tekst", name: "text", widget: "text"}]}
       - file: "site/content/contact/_index.md"
-        label: "Contact Page"
+        label: "Strona kontaktowa"
         name: "contact"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: Tytuł, name: title, widget: string}
           - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
+          - {label: Treść, name: body, widget: markdown}
+          - label: Wpisy kontaktowe
             name: contact_entries
             widget: list
             fields:
-              - label: Heading
+              - label: Nagłówek
                 name: heading
                 widget: string
-              - label: Text
+              - label: Tekst
                 name: text
                 widget: text
       - file: "site/content/products/_index.md"
-        label: "Products Page"
+        label: "Strona produktów"
         name: "products"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {label: Tytuł, name: title, widget: string}
+          - {label: Obraz, name: image, widget: image}
+          - {label: Wstęp, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Główna treść, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Świadectwa, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          - {label: Pełny obraz, name: full_image, widget: image}
+          - {label: Cennik, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
       - file: "site/content/values/_index.md"
-        label: "Values Page"
+        label: "Strona wartości"
         name: "values"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: Values
+          - {label: Tytuł, name: title, widget: string}
+          - {label: Obraz, name: image, widget: image}
+          - label: Wartości
             name: values
             widget: list
             fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: text}
-              - {label: Image, name: imageUrl, widget: image}
+              - {label: Nagłówek, name: heading, widget: string}
+              - {label: Tekst, name: text, widget: text}
+              - {label: Obraz, name: imageUrl, widget: image}
   - name: "site_settings"
-    label: "Site Settings"
+    label: "Ustawienia strony"
     files:
       - file: "site/data/footer.json"
-        label: Footer
+        label: Stopka
         name: footer
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Blurb, name: blurb, widget: text}
+          - {label: Tytuł, name: title, widget: string}
+          - {label: Notka, name: blurb, widget: text}
       - file: "site/hugo.toml"
-        label: Hugo Config
+        label: Konfiguracja Hugo
         name: config
         editor:
           preview: false
         fields:
-          - {label: Site Title for Browser Tab, name: title, widget: string}
-          - label: Params
+          - {label: Tytuł strony w zakładce przeglądarki, name: title, widget: string}
+          - label: Parametry
             name: params
             widget: object
             fields:
-              - label: Open Graph Image
+              - label: Otwórz grafikę
                 name: images
                 widget: list
-                field: { label: Image, name: image, widget: image }
+                field: { label: Obraz, name: image, widget: image }
